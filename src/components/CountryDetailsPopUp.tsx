@@ -28,7 +28,7 @@ export const CountryDetailsPopUp: React.FC<CountryDetailsProps> = ({countryCode,
     const [data, setData] = useState<any>();
     const ThreeDaysForecastAvgTemp = useMemo(() => data ? data.forecast.forecastday.map((fc: any)=> {return {date: fc.date, condition: fc.day.condition.text, averageTemp: averageArrayNumber(fc.hour.map((hourForecast: any) => hourForecast.temp_c))}}) : null, [data]);
     const preciseCityName = useMemo(()=> data ? data.location.name : null, [data]);
-    const preciseCountryOrStateName = useMemo(()=> continent === "northAmerica" ? USCodeToName(countryCode) : regionNames.of(countryCode), [countryCode]);
+    const preciseCountryOrStateName = useMemo(()=> continent === "northAmerica" ? USCodeToName(countryCode) : continent === "africa" ? countryCode : regionNames.of(countryCode), [countryCode]);
     const [citiesList, setCitiesList] = useState<string[]>([]);
     const [searchedCityValue, setSearchedCityValue] = useState<string>("");
     const [selectedCity, setSelectedCity] = useState<string>("");

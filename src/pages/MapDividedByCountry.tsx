@@ -6,6 +6,7 @@ import useDraggableScroll from "use-draggable-scroll";
 import { CountryDetailsPopUp } from "../components/CountryDetailsPopUp";
 import {ReactComponent as EuropeMap} from "../images/europe.svg";
 import {ReactComponent as NAMap} from "../images/north_america.svg";
+import {ReactComponent as AfricaMap} from "../images/africa.svg";
 import {ReactComponent as AsiaMap} from "../images/asia.svg";
 import { randomHexColorGenerator } from "../utils/convertors";
 
@@ -26,10 +27,14 @@ export const ContinentMap: React.FC<ContinentMapProps> = ({continent}) => {
         const mapCurrent = mapRef.current;
         if (mapCurrent) {
          iFrameRef.current.contentWindow.document.body.appendChild(mapCurrent);
-         iFrameRef.current.contentWindow.document.body.style.position = "absolute";
+         if (continent !== "asia" && continent !== "europe") {
+          iFrameRef.current.contentWindow.document.body.style.position = "absolute"
+         }
          const svgDocument = iFrameRef.current.contentWindow.document.body.children[0];
-        const countriesSVGs = continent === "asia" ? Array.from(svgDocument.children[3].children as HTMLCollection) : Array.from(svgDocument.children as HTMLCollection);
+         console.log(svgDocument);
+        const countriesSVGs = continent === "africa" ? Array.from(svgDocument.children[3].children as HTMLCollection) : Array.from(svgDocument.children as HTMLCollection);
         continent === "europe" && countriesSVGs.splice(-3);
+        console.log(countriesSVGs);
 
         const SVGArray: any[] = [];
         continent === "northAmerica" ? countriesSVGs.forEach((child: any)=> {
@@ -40,6 +45,9 @@ export const ContinentMap: React.FC<ContinentMapProps> = ({continent}) => {
           SVGArray.forEach((child: any)=> {
               const colorGenerated = randomHexColorGenerator();
               child.style.fill = `${colorGenerated}`;
+              if (continent === "asia") {
+                child.id = child.id.toUpperCase();
+              }
               if (child.getAttribute('clickListener') !== true) {
                   child.addEventListener("click", (e: any) => {
                   setSelectedCountry(child.id);
@@ -73,6 +81,7 @@ export const ContinentMap: React.FC<ContinentMapProps> = ({continent}) => {
         {continent === "europe" && <EuropeMap  style={{width: minimumWidth ? "100%" : "calc(100% + 100%)", height: "100%"}} ref={mapRef} onMouseDown={onMouseDown}/>}
         {continent === "northAmerica" && <NAMap  style={{width: minimumWidth ? "100%" : "calc(100% + 100%)", height: "100%"}} ref={mapRef} onMouseDown={onMouseDown}/>}
         {continent === "asia" && <AsiaMap  style={{width: minimumWidth ? "100%" : "calc(100% + 100%)", height: "100%"}} ref={mapRef} onMouseDown={onMouseDown}/>}
+        {continent === "africa" && <AfricaMap  style={{width: minimumWidth ? "100%" : "calc(100% + 100%)", height: "100%"}} ref={mapRef} onMouseDown={onMouseDown}/>}
         <iframe ref={iFrameRef} style={{width: "100%", height: "100%", border: "none", zIndex: "1",  overflow: "scroll"}} title="Europe Map"/>
     </Box>;
 }
