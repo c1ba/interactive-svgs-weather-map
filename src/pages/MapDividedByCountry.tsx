@@ -6,7 +6,9 @@ import useDraggableScroll from "use-draggable-scroll";
 import { CountryDetailsPopUp } from "../components/CountryDetailsPopUp";
 import {ReactComponent as EuropeMap} from "../images/europe.svg";
 import {ReactComponent as NAMap} from "../images/north_america.svg";
+import {ReactComponent as SAMap} from "../images/south_america.svg";
 import {ReactComponent as AfricaMap} from "../images/africa.svg";
+import {ReactComponent as AustraliaMap} from "../images/australia.svg";
 import {ReactComponent as AsiaMap} from "../images/asia.svg";
 import { randomHexColorGenerator } from "../utils/convertors";
 
@@ -27,12 +29,12 @@ export const ContinentMap: React.FC<ContinentMapProps> = ({continent}) => {
         const mapCurrent = mapRef.current;
         if (mapCurrent) {
          iFrameRef.current.contentWindow.document.body.appendChild(mapCurrent);
-         if (continent !== "asia" && continent !== "europe") {
+         if (continent !== "asia" && continent !== "europe" && continent !== "australia") {
           iFrameRef.current.contentWindow.document.body.style.position = "absolute"
          }
          const svgDocument = iFrameRef.current.contentWindow.document.body.children[0];
          console.log(svgDocument);
-        const countriesSVGs = continent === "africa" ? Array.from(svgDocument.children[3].children as HTMLCollection) : Array.from(svgDocument.children as HTMLCollection);
+        const countriesSVGs = continent === "africa" ? Array.from(svgDocument.children[3].children as HTMLCollection) : continent === "australia" ? Array.from(svgDocument.children[1].children as HTMLCollection) : Array.from(svgDocument.children as HTMLCollection);
         continent === "europe" && countriesSVGs.splice(-3);
         console.log(countriesSVGs);
 
@@ -77,11 +79,13 @@ export const ContinentMap: React.FC<ContinentMapProps> = ({continent}) => {
 
     return <Box style={{width: "100vw", height: "100vh", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <CountryDetailsPopUp continent={continent} countryCode={`${selectedCountry}`} setCountryCode={setSelectedCountry}/>
-        <Box sx={{width: "90%", display: "flex", justifyContent: "flex-start", mt: "15px", position: "absolute", zIndex: "2"}}><Button onClick={()=> navigate("..")} variant="contained">Back</Button></Box>
+        <Box sx={{width: "90%", display: "flex", justifyContent: "flex-start", mt: "15px", position: "absolute", zIndex: "2"}}><Button onClick={()=> navigate("../interactive-svgs-weather-map")} variant="contained">Back</Button></Box>
         {continent === "europe" && <EuropeMap  style={{width: minimumWidth ? "100%" : "calc(100% + 100%)", height: "100%"}} ref={mapRef} onMouseDown={onMouseDown}/>}
         {continent === "northAmerica" && <NAMap  style={{width: minimumWidth ? "100%" : "calc(100% + 100%)", height: "100%"}} ref={mapRef} onMouseDown={onMouseDown}/>}
+        {continent === "southAmerica" && <SAMap  style={{width: minimumWidth ? "100%" : "calc(100% + 100%)", height: "100%"}} ref={mapRef} onMouseDown={onMouseDown}/>}
         {continent === "asia" && <AsiaMap  style={{width: minimumWidth ? "100%" : "calc(100% + 100%)", height: "100%"}} ref={mapRef} onMouseDown={onMouseDown}/>}
         {continent === "africa" && <AfricaMap  style={{width: minimumWidth ? "100%" : "calc(100% + 100%)", height: "100%"}} ref={mapRef} onMouseDown={onMouseDown}/>}
+        {continent === "australia" && <AustraliaMap  style={{width: minimumWidth ? "100%" : "calc(100% + 100%)", height: "100%"}} ref={mapRef} onMouseDown={onMouseDown}/>}
         <iframe ref={iFrameRef} style={{width: "100%", height: "100%", border: "none", zIndex: "1",  overflow: "scroll"}} title="Europe Map"/>
     </Box>;
 }

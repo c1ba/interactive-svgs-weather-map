@@ -30,6 +30,21 @@ export const averageArrayNumber = (array: number[]) => {
     return array.reduce((accumulator, value) => accumulator + value) / array.length;
 }
 
+export const AUSCodeToName = (code: string) => {
+    const states = [["New South Wales", "NSW"],
+        ["Northern Territory",	"NT"],	
+        ["Queensland",	"QL"],
+        ["South Australia", "SA"],	
+        ["Tasmania", "TS"],
+        ["Victoria", "VI"],
+        ["Western Australia", "WA"],
+        ['Australian Capital Territory', 'ACT']];
+
+        const foundState = states.find((state) => state[1] === code);
+
+    return foundState ? foundState[0] : "";
+}
+
 export const USCodeToName = (code: string) => {
     const states = [
         ['Arizona', 'AZ'],

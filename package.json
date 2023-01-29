@@ -1,7 +1,7 @@
 {
   "name": "weather-interactive-map-ts",
   "version": "0.1.0",
-  "homepage": "https://c1ba.github.io/interactive-svg-weather-app",
+  "homepage": "https://c1ba.github.io/interactive-svgs-weather-map",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

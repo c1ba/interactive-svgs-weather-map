@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Box, Button, CircularProgress, Slide, TextField, Typography } from "@mui/material";
 import React, { useEffect, useMemo, useState } from "react";
-import { averageArrayNumber, USCodeToName } from "../utils/convertors";
+import { AUSCodeToName, averageArrayNumber, USCodeToName } from "../utils/convertors";
 import {ReactComponent as BlizzardIcon} from "../images/icons/blizzard.svg";
 import {ReactComponent as CloudyIcon} from "../images/icons/cloudy.svg";
 // import {ReactComponent as ClearAtTimesIcon} from "../images/icons/clear-at-times.svg";
@@ -28,7 +28,7 @@ export const CountryDetailsPopUp: React.FC<CountryDetailsProps> = ({countryCode,
     const [data, setData] = useState<any>();
     const ThreeDaysForecastAvgTemp = useMemo(() => data ? data.forecast.forecastday.map((fc: any)=> {return {date: fc.date, condition: fc.day.condition.text, averageTemp: averageArrayNumber(fc.hour.map((hourForecast: any) => hourForecast.temp_c))}}) : null, [data]);
     const preciseCityName = useMemo(()=> data ? data.location.name : null, [data]);
-    const preciseCountryOrStateName = useMemo(()=> continent === "northAmerica" ? USCodeToName(countryCode) : continent === "africa" ? countryCode : regionNames.of(countryCode), [countryCode]);
+    const preciseCountryOrStateName = useMemo(()=> continent === "northAmerica" ? USCodeToName(countryCode) : continent === "africa" || continent === "southAmerica" ? countryCode : continent === "australia" ? AUSCodeToName(countryCode) : regionNames.of(countryCode), [countryCode]);
     const [citiesList, setCitiesList] = useState<string[]>([]);
     const [searchedCityValue, setSearchedCityValue] = useState<string>("");
     const [selectedCity, setSelectedCity] = useState<string>("");
@@ -46,7 +46,7 @@ export const CountryDetailsPopUp: React.FC<CountryDetailsProps> = ({countryCode,
         setCitiesList([]);
         setSelectedCity("");
         if (preciseCountryOrStateName && preciseCityName !== "") {
-           const data = continent === "northAmerica" ? {'country': regionNames.of(countryCode.includes("-") ? countryCode.split("-")[0].toUpperCase() : countryCode.includes("_") ? countryCode.split("_")[0].toUpperCase() : countryCode), 'state': `${preciseCountryOrStateName}`} : {'country': `${preciseCountryOrStateName}`};
+           const data = continent === "northAmerica" ? {'country': regionNames.of(countryCode.includes("-") ? countryCode.split("-")[0].toUpperCase() : countryCode.includes("_") ? countryCode.split("_")[0].toUpperCase() : countryCode), 'state': `${preciseCountryOrStateName}`} : continent === "australia" ? {'country': 'Australia', 'state': `${preciseCountryOrStateName}`} : {'country': `${preciseCountryOrStateName}`};
            console.log(data);
             axios({method: 'post', headers: {}, url: `https://countriesnow.space/api/v0.1/countries${continent === "northAmerica" ? '/state' : ''}/cities`, data: data}).then((response) => {
                 const responseData = response.data;

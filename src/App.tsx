@@ -24,7 +24,7 @@ const App:React.FC = () => {
         const continentSVG = svgDocument.getElementById(svgIDs[id].path);
         continentSVG.style.fill = `${svgIDs[id].color}`;
         continentSVG.addEventListener("click", () => {
-          navigate(`/${svgIDs[id].path}`);
+          navigate(`./${svgIDs[id].path}`);
         })
         continentSVG.addEventListener("mouseover", () => {
           continentSVG.style.fill = `yellow`;
