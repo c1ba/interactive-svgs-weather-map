@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/interactive-svgs-weather-map/static/css/main.965ca7fe.css",
-    "main.js": "/interactive-svgs-weather-map/static/js/main.b1043d60.js",
+    "main.js": "/interactive-svgs-weather-map/static/js/main.2b82dfde.js",
     "static/js/787.098a3984.chunk.js": "/interactive-svgs-weather-map/static/js/787.098a3984.chunk.js",
     "static/media/north_america.svg": "/interactive-svgs-weather-map/static/media/north_america.5442f329014f18727126a3289541fed9.svg",
     "static/media/asia.svg": "/interactive-svgs-weather-map/static/media/asia.7db538e2c23a306dc8c4b12a80989418.svg",
     "static/media/Continents.svg": "/interactive-svgs-weather-map/static/media/Continents.c7cf94998f0049b22ded2866dd4eea38.svg",
     "static/media/europe.svg": "/interactive-svgs-weather-map/static/media/europe.580bc97084bcfccaca0799c91ac68ce3.svg",
     "static/media/africa.svg": "/interactive-svgs-weather-map/static/media/africa.acd27630e1149e73895488a7df037a3e.svg",
+    "static/media/australia.svg": "/interactive-svgs-weather-map/static/media/australia.5cadfb6412a165940505026c4754e360.svg",
     "static/media/rain.svg": "/interactive-svgs-weather-map/static/media/rain.57cb212bf001513843d4b810a8d4b893.svg",
     "static/media/blizzard.svg": "/interactive-svgs-weather-map/static/media/blizzard.eee790a287ea3c4d4446f087649082d4.svg",
     "static/media/partly-cloudy.svg": "/interactive-svgs-weather-map/static/media/partly-cloudy.aaebc45bfa203e714c2bff5e761dc91c.svg",
@@ -17,11 +18,11 @@
     "static/media/mist.svg": "/interactive-svgs-weather-map/static/media/mist.7affc370448aa2863f5c7888d4702159.svg",
     "index.html": "/interactive-svgs-weather-map/index.html",
     "main.965ca7fe.css.map": "/interactive-svgs-weather-map/static/css/main.965ca7fe.css.map",
-    "main.b1043d60.js.map": "/interactive-svgs-weather-map/static/js/main.b1043d60.js.map",
+    "main.2b82dfde.js.map": "/interactive-svgs-weather-map/static/js/main.2b82dfde.js.map",
     "787.098a3984.chunk.js.map": "/interactive-svgs-weather-map/static/js/787.098a3984.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.965ca7fe.css",
-    "static/js/main.b1043d60.js"
+    "static/js/main.2b82dfde.js"
   ]
 }
