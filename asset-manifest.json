@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/interactive-svg-weather-app/static/css/main.965ca7fe.css",
-    "main.js": "/interactive-svg-weather-app/static/js/main.fbb70621.js",
-    "static/js/787.098a3984.chunk.js": "/interactive-svg-weather-app/static/js/787.098a3984.chunk.js",
-    "static/media/north_america.svg": "/interactive-svg-weather-app/static/media/north_america.5442f329014f18727126a3289541fed9.svg",
-    "static/media/asia.svg": "/interactive-svg-weather-app/static/media/asia.7db538e2c23a306dc8c4b12a80989418.svg",
-    "static/media/Continents.svg": "/interactive-svg-weather-app/static/media/Continents.c7cf94998f0049b22ded2866dd4eea38.svg",
-    "static/media/europe.svg": "/interactive-svg-weather-app/static/media/europe.580bc97084bcfccaca0799c91ac68ce3.svg",
-    "static/media/africa.svg": "/interactive-svg-weather-app/static/media/africa.acd27630e1149e73895488a7df037a3e.svg",
-    "static/media/rain.svg": "/interactive-svg-weather-app/static/media/rain.57cb212bf001513843d4b810a8d4b893.svg",
-    "static/media/blizzard.svg": "/interactive-svg-weather-app/static/media/blizzard.eee790a287ea3c4d4446f087649082d4.svg",
-    "static/media/partly-cloudy.svg": "/interactive-svg-weather-app/static/media/partly-cloudy.aaebc45bfa203e714c2bff5e761dc91c.svg",
-    "static/media/cloudy.svg": "/interactive-svg-weather-app/static/media/cloudy.8e99ac122bec490d927feed2e5d1a5c4.svg",
-    "static/media/snow.svg": "/interactive-svg-weather-app/static/media/snow.406e501cc787c77871e227fe28cccca6.svg",
-    "static/media/sunny.svg": "/interactive-svg-weather-app/static/media/sunny.4ff7de3a10b5efcaa94e5f2dca806cbe.svg",
-    "static/media/mist.svg": "/interactive-svg-weather-app/static/media/mist.7affc370448aa2863f5c7888d4702159.svg",
-    "index.html": "/interactive-svg-weather-app/index.html",
-    "main.965ca7fe.css.map": "/interactive-svg-weather-app/static/css/main.965ca7fe.css.map",
-    "main.fbb70621.js.map": "/interactive-svg-weather-app/static/js/main.fbb70621.js.map",
-    "787.098a3984.chunk.js.map": "/interactive-svg-weather-app/static/js/787.098a3984.chunk.js.map"
+    "main.css": "/interactive-svgs-weather-app/static/css/main.965ca7fe.css",
+    "main.js": "/interactive-svgs-weather-app/static/js/main.93b3b363.js",
+    "static/js/787.098a3984.chunk.js": "/interactive-svgs-weather-app/static/js/787.098a3984.chunk.js",
+    "static/media/north_america.svg": "/interactive-svgs-weather-app/static/media/north_america.5442f329014f18727126a3289541fed9.svg",
+    "static/media/asia.svg": "/interactive-svgs-weather-app/static/media/asia.7db538e2c23a306dc8c4b12a80989418.svg",
+    "static/media/Continents.svg": "/interactive-svgs-weather-app/static/media/Continents.c7cf94998f0049b22ded2866dd4eea38.svg",
+    "static/media/europe.svg": "/interactive-svgs-weather-app/static/media/europe.580bc97084bcfccaca0799c91ac68ce3.svg",
+    "static/media/africa.svg": "/interactive-svgs-weather-app/static/media/africa.acd27630e1149e73895488a7df037a3e.svg",
+    "static/media/rain.svg": "/interactive-svgs-weather-app/static/media/rain.57cb212bf001513843d4b810a8d4b893.svg",
+    "static/media/blizzard.svg": "/interactive-svgs-weather-app/static/media/blizzard.eee790a287ea3c4d4446f087649082d4.svg",
+    "static/media/partly-cloudy.svg": "/interactive-svgs-weather-app/static/media/partly-cloudy.aaebc45bfa203e714c2bff5e761dc91c.svg",
+    "static/media/cloudy.svg": "/interactive-svgs-weather-app/static/media/cloudy.8e99ac122bec490d927feed2e5d1a5c4.svg",
+    "static/media/snow.svg": "/interactive-svgs-weather-app/static/media/snow.406e501cc787c77871e227fe28cccca6.svg",
+    "static/media/sunny.svg": "/interactive-svgs-weather-app/static/media/sunny.4ff7de3a10b5efcaa94e5f2dca806cbe.svg",
+    "static/media/mist.svg": "/interactive-svgs-weather-app/static/media/mist.7affc370448aa2863f5c7888d4702159.svg",
+    "index.html": "/interactive-svgs-weather-app/index.html",
+    "main.965ca7fe.css.map": "/interactive-svgs-weather-app/static/css/main.965ca7fe.css.map",
+    "main.93b3b363.js.map": "/interactive-svgs-weather-app/static/js/main.93b3b363.js.map",
+    "787.098a3984.chunk.js.map": "/interactive-svgs-weather-app/static/js/787.098a3984.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.965ca7fe.css",
-    "static/js/main.fbb70621.js"
+    "static/js/main.93b3b363.js"
   ]
 }
