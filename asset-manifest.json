@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/interactive-svgs-weather-map/static/css/main.965ca7fe.css",
-    "main.js": "/interactive-svgs-weather-map/static/js/main.79c111e0.js",
+    "main.js": "/interactive-svgs-weather-map/static/js/main.7be55679.js",
     "static/js/787.098a3984.chunk.js": "/interactive-svgs-weather-map/static/js/787.098a3984.chunk.js",
     "static/media/north_america.svg": "/interactive-svgs-weather-map/static/media/north_america.5442f329014f18727126a3289541fed9.svg",
     "static/media/south_america.svg": "/interactive-svgs-weather-map/static/media/south_america.ea9ea063ff7702ff257e3928e7f7d298.svg",
@@ -19,11 +19,11 @@
     "static/media/mist.svg": "/interactive-svgs-weather-map/static/media/mist.7affc370448aa2863f5c7888d4702159.svg",
     "index.html": "/interactive-svgs-weather-map/index.html",
     "main.965ca7fe.css.map": "/interactive-svgs-weather-map/static/css/main.965ca7fe.css.map",
-    "main.79c111e0.js.map": "/interactive-svgs-weather-map/static/js/main.79c111e0.js.map",
+    "main.7be55679.js.map": "/interactive-svgs-weather-map/static/js/main.7be55679.js.map",
     "787.098a3984.chunk.js.map": "/interactive-svgs-weather-map/static/js/787.098a3984.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.965ca7fe.css",
-    "static/js/main.79c111e0.js"
+    "static/js/main.7be55679.js"
   ]
 }
