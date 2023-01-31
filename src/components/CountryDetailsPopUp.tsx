@@ -47,7 +47,6 @@ export const CountryDetailsPopUp: React.FC<CountryDetailsProps> = ({countryCode,
         setSelectedCity("");
         if (preciseCountryOrStateName && preciseCityName !== "") {
            const data = continent === "northAmerica" ? {'country': regionNames.of(countryCode.includes("-") ? countryCode.split("-")[0].toUpperCase() : countryCode.includes("_") ? countryCode.split("_")[0].toUpperCase() : countryCode), 'state': `${preciseCountryOrStateName}`} : continent === "australia" ? {'country': 'Australia', 'state': `${preciseCountryOrStateName}`} : {'country': `${preciseCountryOrStateName}`};
-           console.log(data);
             axios({method: 'post', headers: {}, url: `https://countriesnow.space/api/v0.1/countries${continent === "northAmerica" ? '/state' : ''}/cities`, data: data}).then((response) => {
                 const responseData = response.data;
                 const cities = responseData.data;

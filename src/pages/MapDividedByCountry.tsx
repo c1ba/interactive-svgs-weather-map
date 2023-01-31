@@ -33,10 +33,8 @@ export const ContinentMap: React.FC<ContinentMapProps> = ({continent}) => {
           iFrameRef.current.contentWindow.document.body.style.position = "absolute"
          }
          const svgDocument = iFrameRef.current.contentWindow.document.body.children[0];
-         console.log(svgDocument);
         const countriesSVGs = continent === "africa" ? Array.from(svgDocument.children[3].children as HTMLCollection) : continent === "australia" ? Array.from(svgDocument.children[1].children as HTMLCollection) : Array.from(svgDocument.children as HTMLCollection);
         continent === "europe" && countriesSVGs.splice(-3);
-        console.log(countriesSVGs);
 
         const SVGArray: any[] = [];
         continent === "northAmerica" ? countriesSVGs.forEach((child: any)=> {

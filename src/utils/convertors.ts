@@ -146,7 +146,6 @@ export const USCodeToName = (code: string) => {
         ['Zacatecas',          'ZAC']
     ];
     const stateCode = code.includes("-") ? code.split("-")[1].toUpperCase() : code.includes("_") ? code.split("_")[1].toUpperCase() : code;
-    console.log(code, stateCode);
     const foundState = states.find((stateArray) => stateArray[1] === stateCode);
 
     return foundState ? foundState[0] : "";
